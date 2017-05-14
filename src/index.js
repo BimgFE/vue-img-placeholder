@@ -1,7 +1,7 @@
 import ImgPlaceholder from './index.vue';
 
 ImgPlaceholder.install = function (Vue) {
-    Vue.component(Img.name, ImgPlaceholder);
+    Vue.component(ImgPlaceholder.name, ImgPlaceholder);
 };
 
 export default ImgPlaceholder;
