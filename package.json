@@ -1,6 +1,6 @@
 {
   "name": "vue-img-placeholder",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "vue2响应式图片占位",
   "main": "dist/index.js",
   "scripts": {
