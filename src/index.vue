@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="img-placeholder" v-bind:style="{backgroundColor: backgroundColor, paddingBottom: paddingBottom}">
+        <div class="img-placeholder" :style="{backgroundColor: backgroundColor, paddingBottom: paddingBottom}">
            <img :src="src">
         </div>
     </div>
