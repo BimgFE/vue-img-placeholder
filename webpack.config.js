@@ -15,19 +15,22 @@ module.exports = {
     },
 
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                loader: 'vue-loader',
+                options: {
+                    loaders: {
+                        less: ExtractTextPlugin.extract({
+                            loader: ['css-loader', 'less-loader'],
+                            fallbackLoader: 'vue-style-loader'
+                        })
+                    }
+                }
             },
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/
-            },
-            {
-                test: /\.less$/,
-                use: ExtractTextPlugin.extract(['css-loader','less-loader'])
             }
         ]
     },
@@ -47,6 +50,9 @@ module.exports = {
             output: {
                 comments: false
             }
+        }),
+        new ExtractTextPlugin({
+            filename: 'index.css',
         })
     ]
 };
