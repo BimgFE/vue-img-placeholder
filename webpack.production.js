@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-
 var extensions = ['.js', '.vue'];
 
 module.exports = {
@@ -11,7 +10,8 @@ module.exports = {
         filename: 'index.js',
         path: path.resolve(__dirname, './dist'),
         library: 'VueImgPlaceholder',
-        libraryTarget: 'umd'
+        libraryTarget: 'umd',
+        publicPath: '/',
     },
 
     module: {
@@ -53,6 +53,6 @@ module.exports = {
         }),
         new ExtractTextPlugin({
             filename: 'index.css',
-        })
+        }),
     ]
 };
