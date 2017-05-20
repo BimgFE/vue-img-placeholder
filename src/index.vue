@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import defaultSrc from './img/1.png';
+import defaultSrc from 'src/img/1.png';
 export default {
     name: 'img-placeholder',
     props: {
