@@ -1,16 +1,17 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var extensions = ['.js', '.jsx', '.less', '.vue'];
+var extensions = ['.js', '.vue'];
 
 module.exports = {
-    entry: './demo/app.js',
+    entry: path.resolve(__dirname, './src/index.js'),
 
     output: {
-        filename: '[name].js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '',
+        filename: 'index.js',
+        path: path.resolve(__dirname, './dist'),
+        library: 'VueImgPlaceholder',
+        libraryTarget: 'umd',
+        publicPath: '/',
     },
 
     module: {
@@ -44,7 +45,7 @@ module.exports = {
 
     resolve: {
         alias: {
-            'vue$': 'vue/dist/vue.common.js',
+            '@': path.resolve(__dirname, '../src')
         },
         extensions: extensions
     },
@@ -61,10 +62,5 @@ module.exports = {
         new ExtractTextPlugin({
             filename: 'index.css',
         }),
-        new HtmlWebpackPlugin({
-            title: 'Vue demo',
-            template: 'index.html',
-            inject: true
-        })
     ]
 };

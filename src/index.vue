@@ -1,12 +1,13 @@
 <template>
     <div>
-        <div class="img-placeholder" v-bind:style="{backgroundColor: backgroundColor, paddingBottom: paddingBottom}">
+        <div class="img-placeholder" :style="{backgroundColor: backgroundColor, paddingBottom: paddingBottom}">
            <img :src="src">
         </div>
     </div>
 </template>
 
 <script>
+import defaultSrc from './img/1.png';
 export default {
     name: 'img-placeholder',
     props: {
@@ -24,7 +25,7 @@ export default {
         },
         src: {
             type: String,
-            required: true
+            default: defaultSrc
         }
     },
 
