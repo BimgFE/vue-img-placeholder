@@ -30,6 +30,14 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url-loader',
+                query: {
+                    limit: 20000, // limit image size, if > 20kb, it will output file, or it will base64
+                    name: 'img/[name].[hash:7].[ext]'
+                }
             }
         ]
     },

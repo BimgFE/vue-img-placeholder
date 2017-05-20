@@ -4,7 +4,7 @@
   "description": "vue2响应式图片占位",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "npm run build && webpack-dev-server --inline --hot --quiet --config webpack.demo.js",
+    "dev": "webpack-dev-server --inline --hot --quiet",
     "build": "rm -rf dist/* && webpack --progress --hide-modules --config webpack.production.js",
     "prepublish": "npm run build"
   },
@@ -29,9 +29,11 @@
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.28.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
+    "url-loader": "^0.5.8",
     "vue": "^2.3.3",
     "vue-img-placeholder": "^0.0.2",
     "vue-loader": "^12.0.3",
