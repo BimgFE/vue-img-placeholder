@@ -46,6 +46,7 @@ export default {
     border: 0 none;
     height: 0;
     overflow: hidden;
+    background: url('~src/img/2.png') no-repeat center center;
 
     img {
         left: 0;
