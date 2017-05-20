@@ -36,4 +36,18 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-/dist/
+dist
+
+.DS_Store
+
+yarn-error.log
+
+# vscodeÏ
+.vscode
+
+# IDEA JetBrains
+.idea
+*.iml
+
+
+
